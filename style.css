@@ -1,0 +1,93 @@
+/* Réinitialisation globale pour un meilleur contrôle des tailles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Centrage de la calculatrice au milieu de la fenêtre du navigateur */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle, #1f2937 0%, #0f172a 100%);
+}
+/* Boîtier principal de la calculatrice */
+.contenue {
+  width: 95%;
+  max-width: 350px;
+  height: auto;
+  background-color: #111827;
+  border-radius: 20px;
+  padding: 10px;
+  font-family: sans-serif;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.596);
+}
+
+.Resultat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Barre supérieure contenant les boutons de fonction (AC, DEL) */
+.entet {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.entet .btn {
+  padding: 10px;
+  width: 30%;
+  border-radius: 50px;
+  background-color: #050779;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.entet .btn:hover {
+  background-color: #0b0236;
+  cursor: pointer;
+}
+
+/* Style de l'écran d'affichage */
+input {
+  padding: 20px;
+  border-radius: 20px;
+  width: 100%;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Style par défaut pour les boutons numériques et opérateurs */
+.btn {
+  padding: 20px;
+  border: none;
+  border-radius: 50px;
+  background-color: #2932b6;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.596);
+}
+
+.btn:hover {
+  background-color: rgb(16, 16, 78);
+}
+
+/* Organisation des touches en grille de 4 colonnes */
+.rang1,
+.rang2,
+.rang3,
+.rang4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+}
